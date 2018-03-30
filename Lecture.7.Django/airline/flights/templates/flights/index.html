@@ -1,0 +1,14 @@
+{% extends 'flights/base.html' %}
+
+{% block title %}Flights{% endblock%}
+
+{% block body %}
+    <h1>Flights</h1>
+    <br />
+    <ul>
+    {% for flight in flights %}
+      <li>{{ flight }}</li>
+    {% endfor %}
+  </ul>
+
+{% endblock%}

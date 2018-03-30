@@ -1,0 +1,41 @@
+{% extends 'flights/base.html' %}
+
+{% block title %}{{ flight.id }}{% endblock%}
+
+{% block body %}
+
+
+<div class="card">
+  <div class="card-header">
+    Flight {{ flight.id }}
+  </div>
+  <div class="card-body">
+    <p class="card-text"><li>Origin: {{ flight.origin }}</li>
+      <li>Destination: {{ flight.destination }}</li>
+      <li>Duration: {{ flight.duration }}</li></p>
+        <h5 class="card-title">Passangers</h5>
+    {% for passanger in passangers %}
+      <li>{{ passanger }}</li>
+    {% endfor %}
+  </div>
+</div>
+
+<h2>Add a Passanger</h2>
+
+{% if non_passangers %}
+<from action="" method='POST'>
+  {% csrf_token %}
+<select name='passanger'>
+  {% for passanger in non_passangers %}
+    <option value="{{passanger.id}}">{{ passanger.first }}</option>
+  {% endfor %} 
+</select>
+<input type="submit" value="Book Flight">
+</from>
+
+{% else %}
+<p>No passanger to addd.</p>
+{% endif %}
+
+
+{% endblock%}
