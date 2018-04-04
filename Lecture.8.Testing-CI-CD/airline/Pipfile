@@ -1,0 +1,20 @@
+[[source]]
+
+name = "pypi"
+verify_ssl = true
+url = "https://pypi.python.org/simple"
+
+
+[requires]
+
+python_version = "3.6"
+
+
+[packages]
+
+django = "*"
+"unittest2" = "*"
+
+
+[dev-packages]
+
