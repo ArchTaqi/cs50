@@ -1,0 +1,22 @@
+version: "3.0"
+
+services:
+  db:
+    image: postgres # use this docker image to construct database.
+  migration:
+    build: .
+    command: python3 manage.py migrate
+    volumes:
+      - .:/user/src/app  # link btw the current directory to the app directory
+    depends_on:
+      - db
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000" # map container port to my OS port
+    depends_on:
+      - db
+      - migration
