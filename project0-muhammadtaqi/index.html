@@ -1,0 +1,107 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CS50 - project0-muhammadtaqi</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+  <body>
+    <div class="container">
+      <header class="header clearfix">
+        <nav>
+          <div class="text-muted brand align-middle">project0-muhammadtaqi</div>
+
+          <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <ul class="mobile-menu-bg nav nav-pills vcenter justified navbar-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page1.html">Page 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page2.html">Page 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page3.html">Page 3</a>
+            </li>
+          </ul>
+
+        </nav>
+      </header>
+
+      <main role="main">
+        <div class="jumbotron">
+          <p class="lead">
+          <b>CSCI E-33a</b> <br /> 
+          Web Programming with Python and JavaScript<br /> 
+          <small>Produced by CS50</small><br />
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h4>Requirements Was</h4>
+			<p>Alright, now it’s time to make your website your own. Design a personal webpage
+			about yourself, one of your interests, or any other topic of your choice. The
+			subject matter, look and feel, and design of the site are entirely up to you,
+			subject to the following requirements:</p>
+
+			<ul>
+			  <li>Your website must contain at least four different <code class="highlighter-rouge">.html</code> pages, and it
+			should be possible to get from any page on your website to any other page by
+			following one or more hyperlinks.</li>
+			  <li>Your website must include at least one list (ordered or unordered), at least
+			one table, and at least one image.</li>
+			  <li>Your website must have at least one stylesheet file.</li>
+			  <li>Your stylesheet(s) must use at least five different CSS properties, and at
+			least five different types of CSS selectors. You must use the <code class="highlighter-rouge">#id</code> selector
+			at least once, and the <code class="highlighter-rouge">.class</code> selector at least once.</li>
+			  <li>Your stylesheet(s) must include at least one mobile-responsive <code class="highlighter-rouge">@media</code> query,
+			such that something about the styling changes for smaller screens.</li>
+			  <li>You must use Bootstrap 4 on your website, taking advantage of at least one
+			Bootstrap <a href="https://getbootstrap.com/docs/3.3/components/">component</a>,
+			and using at least two Bootstrap columns for layout purposes using
+			Bootstrap’s <a href="https://getbootstrap.com/docs/4.0/layout/grid/">grid model</a>.</li>
+			  <li>Your stylesheets must use at least one SCSS variable, at least one example of
+			SCSS nesting, and at least one use of SCSS inheritance.</li>
+			  <li>In <code class="highlighter-rouge">README.md</code>, include a short writeup describing your project, what’s
+			contained in each file, and (optionally) any other additional information the
+			staff should know about your project.</li>
+			</ul>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="thanks">
+        This site is developed for Web Programming with Python and JavaScript <a href="https://cs50.github.io/web/projects/0/">Project 0 Assignment</a>.
+        </p>
+      </footer>
+
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $('.mobile-menu').click(function() {
+          $(this).toggleClass('open');
+          $('.mobile-menu-bg').toggleClass('open');
+          $('.container').toggleClass('open');
+        });
+      });
+    </script>
+
+  </body>
+</html>
