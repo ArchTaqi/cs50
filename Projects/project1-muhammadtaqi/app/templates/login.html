@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}Login Page{% endblock title %}
+{% block body %}
+    <div class="row">    
+        <div class="col-md-8 offset-md-2">
+			{% if session['logged_in'] %}
+          		<h4 class="mb-3 text-center">You're logged in already!.</h4>
+			{% else %}
+				<h4 class="mb-3 text-center">Please log into your account in order to access Books.</h4>
+          
+				<form action="{{ url_for('login') }}" method="POST" class="needs-validation" novalidate>
+		            <div class="mb-3">
+		              <label for="email">Email <span class="text-danger">*</span></label>
+		              <input type="email" class="form-control" id="email" name='email' placeholder="you@example.com">
+		              <div class="invalid-feedback">
+		                Please enter a valid email address for shipping updates.
+		              </div>
+		            </div>
+
+		            <div class="mb-3">
+		              <label for="address">Password <span class="text-danger">*</span></label>
+		              <input type="Password" class="form-control" id="password" name='password' placeholder="your password!" required>
+		              <div class="invalid-feedback">
+		                Please enter your valid password.
+		              </div>
+		            </div>
+		            
+		            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+				</form>
+			{% endif %}
+        </div>
+      </div>
+{% endblock body %}
